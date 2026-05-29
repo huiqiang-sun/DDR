@@ -1,7 +1,5 @@
 # DDR：小相机运动视频的动态新视角合成
 
-本仓库是论文 **Dynamic View Synthesis From Small Camera Motion Videos** 的代码工程。项目基于 [Neural Scene Flow Fields](https://github.com/zhengqili/Neural-Scene-Flow-Fields) 搭建，并在 NSFF 风格的动态 NeRF 框架上加入了 **Distribution-based Depth Regularization，简称 DDR**，用于解决小相机运动条件下动态场景新视角合成中的几何不稳定问题。
-
 该工程面向单目动态视频输入。系统会先对视频帧进行预处理，得到相机参数、单目深度、前后向光流和运动区域掩码等先验信息；随后训练动态/静态双分支 NeRF，并联合优化相机位姿和焦距；最终可以进行新视角渲染、慢动作时间插值、空间-时间联合插值以及定量评估。
 
 ## 项目特点
