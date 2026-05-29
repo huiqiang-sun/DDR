@@ -1,0 +1,1 @@
+# small_camera_motion_dynamic_nerf
