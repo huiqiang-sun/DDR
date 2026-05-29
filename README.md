@@ -128,6 +128,22 @@ DDR/scripts/model.pt
 
 ## 数据目录格式
 
+### Nvidia Dynamic Scene Dataset 下载
+
+论文实验主要使用 Nvidia Dynamic Scene Dataset。该数据集也被 NSFF 用于动态场景新视角合成评估，NSFF 官方 README 中提供的数据下载入口为：
+
+- 数据集下载文件夹：[Google Drive](https://drive.google.com/drive/folders/1G-NFZKEA8KSWojUKecpJPVoq5XCjBLOV?usp=sharing)
+- 需要下载的数据集文件：`dynamic_scene_data_full.zip`
+- 可选预训练模型文件：`dynamic_scene_pretrained_models.zip`
+
+下载并解压后，可以根据实际路径修改配置文件中的 `datadir`。例如，若解压后的场景路径为 `/data/nvidia_data_full/Balloon1-2/dense`，则配置文件中应设置：
+
+```text
+datadir = /data/nvidia_data_full/Balloon1-2/dense
+```
+
+Nvidia Dynamic Scene Dataset 包含 `Balloon1`、`Balloon2`、`DynamicFace`、`Jumping`、`Playground`、`Skating`、`Truck`、`Umbrella` 等动态场景。本项目的 `exp/configs/config_nvidia/` 目录已经提供了这些场景对应的示例配置文件。
+
 每个场景建议采用 LLFF/NSFF 风格目录结构：
 
 ```text
